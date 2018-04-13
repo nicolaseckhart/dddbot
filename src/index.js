@@ -14,6 +14,7 @@ const client = new Discord.Client();
 
 // Parse Dota gero information to begin with
 var heroes = new HeroCollection();
+heroes.parseHeroes();
 
 /* 
  * =========================

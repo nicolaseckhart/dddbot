@@ -7,7 +7,6 @@ const Hero = require('./Hero');
 class HeroCollection {
     constructor() {
         this.heroes = [];
-        this.parseHeroes();
     }
 
     async parseHeroes() {

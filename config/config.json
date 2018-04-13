@@ -1,5 +1,4 @@
 {
-    "token"  : "your-bot-token",
     "prefix" : "+",
     "commands": [
         { "name": "say", "usage": "say Some List Of Words", "description": "The bot repeats everything after \"say\" and deletes your message." },

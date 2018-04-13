@@ -1,5 +1,7 @@
 # dddbot
 
+![](https://travis-ci.org/nicolaseckhart/dddbot.svg?branch=master) 
+
 ## Setup
 
 Clone repository and navigate into the folder:

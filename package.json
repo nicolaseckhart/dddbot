@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover --include-all-sources jasmine"
   },
   "author": "Nicolas Eckhart (https://github.com/nicolaseckhart)",
   "license": "ISC",
@@ -25,7 +25,9 @@
   },
   "repository": "https://github.com/nicolaseckhart/dddbot/",
   "devDependencies": {
+    "istanbul": "^1.1.0-alpha.1",
     "jasmine": "^3.1.0",
+    "mockery": "^2.1.0",
     "nodemon": "^1.17.3"
   }
 }

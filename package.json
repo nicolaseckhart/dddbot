@@ -4,7 +4,8 @@
   "description": "DDoserz Discord Bot",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js",
+    "start": "npm ./src/index.js",
+    "develop": "nodemon ./src/index.js",
     "test": "istanbul cover --include-all-sources jasmine"
   },
   "author": "Nicolas Eckhart (https://github.com/nicolaseckhart)",

@@ -65,9 +65,11 @@ client.on("message", async message => {
     }
 
     if (command === "stalk") {
-        var player = new Player(args[0], heroes);
-        await player.parsePlayerInformation();
-        message.channel.send(player.embedify());
+        for(let i = 0; i < args.length; i++) {
+            let player = new Player(args[i], heroes);
+            await player.parsePlayerInformation();
+            message.channel.send(player.embedify());
+        }
     }
 
     if (command === "help") {

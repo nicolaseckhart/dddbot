@@ -15,13 +15,11 @@ Install node dependencies:
 npm install
 ```
 
-You'll need to copy the `config.example.json` file and fill in your bot token:
+You'll need to create a .env file to hold your bot token:
 
 ```bash
-cp config/config.example.json config/config.json
+echo "TOKEN=your-token" >> .env
 ```
-
-
 
 ## Tests
 
@@ -33,7 +31,7 @@ npm test
 
 ## Run
 
-Run the bot with nodemon (autorefresh):
+Run the bot with:
 
 ```bash
 npm start

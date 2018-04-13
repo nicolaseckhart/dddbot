@@ -1,0 +1,9 @@
+{
+    "token"  : "your-bot-token",
+    "prefix" : "+",
+    "commands": [
+        { "name": "say", "usage": "say Some List Of Words", "description": "The bot repeats everything after \"say\" and deletes your message." },
+        { "name": "purge", "usage": "purge <number>", "description": "The bot deletes the last <number> message in the channel you post the command in."},
+        { "name": "stalk", "usage": "stalk <opendota-player-id>", "description": "The bot posts a summary of the players OpenDota profile in the channel."}
+    ]
+}

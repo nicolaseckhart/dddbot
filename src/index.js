@@ -68,6 +68,15 @@ client.on("message", async message => {
         await player.parsePlayerInformation();
         message.channel.send(player.embedify());
     }
+
+    if (command === "help") {
+        let helpMessage = '';
+        for(let i = 0; i < config.commands.length; i++) {
+            let command = config.commands[i];
+            helpMessage += `__**${command.name}**__\n**Usage:** \`${config.prefix}${command.usage}\`\n**Description:** ${command.description}\n\n`;
+        }
+        message.channel.send(helpMessage);
+    }
 });
 
 client.login(config.token);

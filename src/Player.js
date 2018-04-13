@@ -16,8 +16,13 @@ class Player {
     }
 
     async parsePlayerInformation() {
-        let response;
-        let data;
+        await this.parseProfile();
+        await this.parseWinLose();
+        await this.parseHeroes();
+    }
+
+    async parseProfile() {
+        let response, data;
 
         // Parse the basic data
         response = await rp(this.apiBasePath);
@@ -28,12 +33,20 @@ class Player {
         this.estimatedRank = data.mmr_estimate.estimate;
         if (data.profile.name) this.mainname = data.profile.name;
         if (data.leaderboard_rank) this.leaderboardRank = data.leaderboard_rank;
+    }
+
+    async parseWinLose() {
+        let response, data;
 
         // Parse the W/L stats
         response = await rp(`${this.apiBasePath}/wl`);
         data = JSON.parse(response);
         this.wins = data.win;
         this.losses = data.lose;
+    }
+
+    async parseHeroes() {
+        let response, data;
 
         // Parse the hero related data
         response = await rp(`${this.apiBasePath}/heroes`);

@@ -25,6 +25,7 @@
   },
   "repository": "https://github.com/nicolaseckhart/dddbot/",
   "devDependencies": {
+    "jasmine": "^3.1.0",
     "nodemon": "^1.17.3"
   }
 }

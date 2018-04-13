@@ -1,3 +1,4 @@
+// Classes
 const Hero = require('../src/Hero');
 
 describe("Hero", function () {

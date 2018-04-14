@@ -78,10 +78,6 @@ class Player {
         return ((this.wins * 100) / (this.wins + this.losses)).toFixed(2);
     }
 
-    heroWinrate(gamesPlayed, gamesWon) {
-        return ((gamesWon * 100) / gamesPlayed).toFixed(2);
-    }
-
     get heroSummary() {
         let summary = '';
         for (let i = 0; i < 5; i++) {
@@ -89,6 +85,10 @@ class Player {
             summary += `**${i + 1}:** ${this.heroCollection.heroNameFromNumber(hero.hero_id)} (played: ${hero.games}, winrate: ${this.heroWinrate(hero.games, hero.win)}%)\n`
         }
         return summary;
+    }
+
+    heroWinrate(gamesPlayed, gamesWon) {
+        return ((gamesWon * 100) / gamesPlayed).toFixed(2);
     }
 
     embedify() {

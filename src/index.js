@@ -7,7 +7,7 @@ const config = require("../config/config.json");
 
 // Classes
 const Player = require("./Player");
-const Hero = require("./Hero").default;
+const Hero = require("./Hero");
 const HeroCollection = require("./HeroCollection");
 
 // Bot

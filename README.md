@@ -15,18 +15,33 @@ Install node dependencies:
 npm install
 ```
 
-You'll need to create a .env file to hold your bot token:
+You'll need to create a .env file to hold your bot token & database url:
 
 ```bash
-echo "TOKEN=your-token" >> .env
+echo "TOKEN=your-token\nDATABASE_URL=postgres://your-db-url" >> .env
 ```
+
+Whatever pg database you use, run the sql in `schema.sql` to set up the needed
+tables.
 
 ## Tests
 
-Run all tests and display coverage report:
+Run lints, tests and coverage report checks:
 
 ```bash
 npm test
+```
+
+Run linter:
+
+```bash
+npm run lint
+```
+
+Run linter with autocorrections:
+
+```bash
+npm run lint:fix
 ```
 
 ## Run
@@ -35,5 +50,11 @@ Run the bot with:
 
 ```bash
 npm start
+```
+
+Run the bot in development mode (with nodemon autorestart):
+
+```bash
+npm start:dev
 ```
 

@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nf start",
+    "start:dev": "nf run nodemon src/index.js",
+    "lint": "eslint src *.js",
+    "lint:fix": "eslint --fix src",
     "test": "istanbul cover --include-all-sources jasmine"
   },
   "author": "Nicolas Eckhart (https://github.com/nicolaseckhart)",
@@ -26,6 +29,7 @@
   },
   "repository": "https://github.com/nicolaseckhart/dddbot/",
   "devDependencies": {
+    "eslint": "^4.19.1",
     "istanbul": "^1.1.0-alpha.1",
     "jasmine": "^3.1.0",
     "nodemon": "^1.17.3",

@@ -8,7 +8,8 @@
     "start:dev": "nf run nodemon src/index.js",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "test": "istanbul cover --include-all-sources jasmine"
+    "test": "eslint src && istanbul cover --include-all-sources jasmine",
+    "posttest": "istanbul check-coverage --statements 100 --branches 100"
   },
   "author": "Nicolas Eckhart (https://github.com/nicolaseckhart)",
   "license": "ISC",

@@ -6,8 +6,6 @@ const fs = require('fs');
 const config = require('../config/config.json');
 
 // Classes
-const Player = require('./Player');
-const Hero = require('./Hero');
 const HeroCollection = require('./HeroCollection');
 
 // Bot
@@ -48,7 +46,8 @@ fs.readdir('./src/commands/', (err, files) => {
  */
 
 client.on('ready', () => {
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
+  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} 
+               channels of ${client.guilds.size} guilds.`);
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
@@ -62,7 +61,7 @@ client.on('guildDelete', guild => {
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
-client.on('message', async message => {
+client.on('message', message => {
   if (message.author.bot) return;
   if (message.content.indexOf(config.prefix) !== 0) return;
 
